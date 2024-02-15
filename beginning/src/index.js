@@ -3,28 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from './components/Home';
+import RecipeList from './components/RecipeList';
 import NewRecipe from './components/NewRecipe';
-import Favorites from './components/Favorites';
 import App from './App';
+import NotReorders from './components/NotReorders';
+import Error from './components/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <Home />,
+    errorElement: <Error />,
     children: [
       {
-        path: "home",
-        element: <Home />
+        path: "recipelist",
+        element: <RecipeList />
       },
       {
         path: "newrecipe",
         element: <NewRecipe />
       },
       {
-        path: "favorites",
-        element: <Favorites />
+        path: "notreorders",
+        element: <NotReorders />
       }
     ]
   }

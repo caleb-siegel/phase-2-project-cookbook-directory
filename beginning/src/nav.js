@@ -2,17 +2,17 @@ import { NavLink } from "react-router-dom";
 
 function Nav() {
     return (
-        <nav className="flex justify-between">
+        <nav className="navbar" >
             <div>
-                <NavLink to="home">Home</NavLink>
+                <NavLink to="recipelist">Home</NavLink>
             </div>
             <div>
                 <NavLink to="newrecipe">New Recipe</NavLink>
             </div>
             <div>
-                <NavLink to="favorites">Favorites</NavLink>
+                <NavLink to="notreorders">Not Reorders</NavLink>
             </div>
-   </nav>
+        </nav>
     )
 }
 
